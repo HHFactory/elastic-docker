@@ -1,0 +1,21 @@
+network.host: 0.0.0.0
+
+cluster.name: hhfactory-cluster
+
+node.name: ${NODE_NAME}
+
+discovery.zen.ping.unicast.hosts: ["192.168.33.10"]
+
+####### index ######
+index:
+  analysis:
+    analyzer:
+      ja_text_analyzer:
+        tokenizer: ja_text_tokenizer
+        type: custom
+        char_filter: [icu_normalizer]
+        filter: [kuromoji_part_of_speech]
+    tokenizer:
+      ja_text_tokenizer:
+        type: kuromoji_tokenizer
+        mode: search
