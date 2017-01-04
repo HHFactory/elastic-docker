@@ -1,0 +1,27 @@
+{
+	"mappings":{
+		"items": {
+			"dynamic": "false",
+			"_source": {
+				"enabled": false
+			},
+			"_all": {
+				"enabled": true,
+				"analyzer": "ja_text_analyzer"
+			},
+			"properties": {
+				"characteristic":{
+					"type": "string"
+				},
+				"find_location": {
+					"type": "string"
+				},
+				"date":{
+					"type": "date",
+					"format": "date_time_no_millis"
+				}
+			}
+		}
+	}
+
+}
