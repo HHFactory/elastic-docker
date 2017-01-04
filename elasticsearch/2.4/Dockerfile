@@ -53,6 +53,7 @@ RUN set -ex \
 RUN plugin install license
 RUN plugin install marvel-agent
 RUN plugin install mobz/elasticsearch-head
+RUN plugin install polyfractal/elasticsearch-inquisitor
 
 # analyzerをインストール
 RUN plugin install analysis-kuromoji
